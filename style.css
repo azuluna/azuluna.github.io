@@ -1,0 +1,157 @@
+.navbar {
+    background-color: white;
+    font-style: italic;
+    margin-bottom: 100px;
+}
+
+.navbar .navbar-brand {
+    font-family: 'Spectral',
+        serif;
+    font-size: 30px;
+}
+
+.batas hr {
+    border-top: 1px solid black;
+}
+
+.about .nama {
+    font-family: 'Spectral',
+        serif;
+    font-size: 60px;
+    margin-top: 100px;
+}
+
+.about .hi {
+    font-style: italic;
+    margin-bottom: 100px;
+    color: #20639b;
+}
+
+.about img {
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.edu {
+    margin-top: 150px;
+}
+
+.edu img {
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.edu .judul {
+    font-family: 'Spectral',
+        serif;
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.edu .sub {
+    font-style: italic;
+    color: #20639b;
+    margin-top: 20px;
+}
+
+
+.mampu .judul {
+    font-family: 'Spectral',
+        serif;
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.mampu .sub {
+    font-style: italic;
+    color: #20639b;
+    margin-top: 150px;
+}
+
+.mampu img {
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.mampu {
+    margin-top: 150px;
+}
+
+.footer {
+    background-color: #141517;
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+}
+
+hr {
+    border-top: 1px solid white;
+}
+
+.jumbotron {
+    margin-top: 150px;
+    background-image: url(img/home/jWJFDNPQ.jpeg);
+    color: white;
+    padding-top: 200px;
+    padding-bottom: 20DO0px;
+}
+
+.footer .nama {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-family: 'Spectral',
+        serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.footer .sub {
+    font-family: 'Spectral',
+        serif;
+    font-style: italic;
+    margin-top: -20px;
+}
+
+.footer .sosmed {
+    padding-top: 40px;
+    /* padding-bottom: 20px; */
+}
+
+.footer .kontak {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.footer .btn {
+    /* padding-top: 40px;
+    padding-bottom: 20px; */
+    font-family: 'Spectral',
+        serif;
+    color: white;
+}
+
+
+
+@media (min-width: 992px) {
+    .about .nama {
+        margin-top: 140px;
+    }
+
+    .edu {
+        margin-top: 150px;
+    }
+
+    .mampu {
+        margin-top: 150px;
+    }
+
+    .footer {
+        text-align: left;
+    }
+
+    .footer .nama {
+        font-size: 50px;
+    }
+
+
+}
