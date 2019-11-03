@@ -22,6 +22,8 @@
 }
 
 .about .hi {
+    font-family: 'Spectral',
+        serif;
     font-style: italic;
     margin-bottom: 100px;
     color: #20639b;
