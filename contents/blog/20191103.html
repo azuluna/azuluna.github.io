@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../style.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Spectral:400,400i&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/95505eef67.js" crossorigin="anonymous"></script>
+
+    <title>Menambahkan NodeMCU pada Arduino IDE</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand mb-0 h1" href="../"><b>.latief</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="../blog.html">.blog</a>
+                    <a class="nav-item nav-link" href="../about.html">.about</a>
+                    <a class="nav-item nav-link" href="../portofolio.html">.portfolio</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row judul">
+            <div class="col-md-12">
+                <p class="nama">Menambahkan NodeMCU pada Arduino IDE</p>
+            </div>
+        </div>
+
+        <div class="row konten">
+            <div class="col-md-12">
+                <p class="hi">Bandung, 03 November 2019</p>
+                <hr>
+            </div>
+            <div class="col-md-12">
+                <p class="isi">Sesuai namanya Arduino IDE umumnya kita pakai untuk memprogram board Arduino seperti
+                    Nano,
+                    Uno, Mega, atau yang lainnya. <i>Thanks to Open source community,</i> kita bisa memprogram board
+                    lain dengan Arduino IDE. Tanpa ba-bi-bu berikut cara menambahkan board ESP8266 pada Arduino IDE:</p>
+                <ol>
+                    <li><b>Instal Arduino IDE</b></li>
+                    <p>Aplikasi Arduino IDE bisa di dowload pada <a href="https://www.arduino.cc/en/Main/Software"
+                            target="_blank">halaman resmi Arduino.</a>
+                        Untuk instalasi
+                        saya yakin udah pada bisa tinggal klik next-next aja buat pengguna Windows. Untuk pengguna
+                        sistem
+                        operasi unix juga udah disediakan tinggal download, extract, dan install via terminal</p>
+                    <li><b>Tambah URL</b></li>
+                    <p>Buka program Arduino IDE, buka preferences. Caranya masuk ke menu <b>File</b> lalu
+                        <b>preferences</b> atau dengan shortcut <kbd>Ctrl + ,</kbd> masukkan:
+                        <code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code> pada Additional
+                        Boards Managers URLs. lalu klik OK.
+                    </p>
+                    <img src="../../img/blog-01/tambahurl.PNG" class="mx-auto d-block" alt="add url">
+                    <li><b>Tambah Board</b></li>
+                    <p>Masuk ke menu <b>Tools</b> lalu masuk ke <b>board.</b> Pilih board manager. cari
+                        <code>ESP8266</code>, pilih yang dari ESP8266 Community.</p> Pilih versi sesuai keinginan,
+                    disarankan pilih yang paling baru. Setelah itu klik instal dan tunggu hingga proses download
+                    berjalan sesuai dengan kecepatan koneksi. jika sudah tinggal klik close
+                    <img src="../../img/blog-01/tambahboard.PNG" class="mx-auto d-block" alt="add board">
+                    <li><b>Pilih Board</b></li>
+                    <p>Jika semua proses diatas sudah dilakukan dengan benar, buka menu <b>Tools</b> lagi, pada menu
+                        <b>Board</b> coba scroll kebawah, disana pilihan Nodemcu akan muncul seperti pada gambar
+                        dibawah.</p>
+                    <img src="../../img/blog-01/board.png" class="mx-auto d-block board" alt="">
+                </ol>
+                <p>Ada beberapa kasus pada sistem operasi <b>Windows</b> dimana Arduino IDE gagal terhubung dengan
+                    repository ESP8266. solusinya bisa dengan menginstal secara manual. Caranya cukup mudah:</p>
+                <ol>
+                    <li><b>Download File</b></li>
+                    <p>Download file yang dibutuhkan pada <a
+                            href="https://drive.google.com/file/d/11Plbh-RZbh7vDXKNq0tWOsuEd48K6gGj/view?usp=sharing">link
+                            ini.</a>
+                    </p>
+                    <li><b>Extract File</b></li>
+                    <p>FIle yang telah didownload diextract, lalu pindahkan isinya ke
+                        <code>C:\Users\user_name\AppData\Local\Arduino15</code> kemudian restart Arduino IDE bila
+                        masih terbuka.</p>
+                    <b>Done! Selamat bermain!</b>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- <p class="nama">.latief</p> -->
+                    <a href="https://github.com/azuluna" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://id.linkedin.com/in/mhamdanlatief" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/channel/UCrC2FeBWIbak_-uJyXDHcZA/featured" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <p class="sub">Muhammad Hamdan Latief</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

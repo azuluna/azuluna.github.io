@@ -21,6 +21,16 @@
     margin-top: 100px;
 }
 
+.judul {
+    font-family: 'Spectral',
+        serif;
+    font-size: 60px;
+}
+
+.konten {
+    margin-top: 60px;
+}
+
 .about .hi {
     font-family: 'Spectral',
         serif;
@@ -38,10 +48,16 @@
 .organization,
 .on-job,
 .on-training,
-.on-skill {
+.on-skill,
+.date {
     margin-top: 200px;
     font-family: 'Spectral',
         serif;
+}
+
+.date .first h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .academic .hi,
@@ -68,6 +84,11 @@
 .portfolio {
     align-items: center;
     text-align: center;
+}
+
+.konten img {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .container .card {
@@ -205,7 +226,6 @@
 }
 
 
-
 @media (min-width: 992px) {
     .about .nama {
         margin-top: 140px;
@@ -219,5 +239,12 @@
         font-size: 50px;
     }
 
+    .konten img {
+        width: 50%;
+    }
+
+    .konten .board {
+        width: 80%;
+    }
 
 }
