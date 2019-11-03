@@ -173,7 +173,7 @@
     font-family: 'Spectral',
         serif;
     font-style: italic;
-    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
 .footer .sosmed {
@@ -194,6 +194,14 @@
     color: white;
 }
 
+.fab {
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
 
 
 @media (min-width: 992px) {
@@ -201,9 +209,9 @@
         margin-top: 140px;
     }
 
-    .footer {
+    /* .footer {
         text-align: left;
-    }
+    } */
 
     .footer .nama {
         font-size: 50px;
