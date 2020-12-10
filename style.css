@@ -20,14 +20,36 @@
     color: red;
 }
 
+i {
+    color: red;
+}
+
 .container .jumbotron {
+    margin-top: -60px;
     text-align: center;
-    margin-top: 15%;
-    margin-bottom: 20%;
+    height: 100vh;
+    padding-top: 50%;
 }
 
 .jumbotron b {
-    font-size: 90px;
+    font-size: 40pt;
+}
+
+@media (min-width: 768px) {
+    .container .jumbotron {
+        padding-top: 20%;
+    }
+
+    .jumbotron b {
+        font-size: 90pt;
+    }
+}
+
+
+.jumbotron p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
@@ -61,10 +83,6 @@
     height: 100%;
 }
 
-i {
-    color: red;
-}
-
 .course {
     margin-top: 10pt;
 }
@@ -77,6 +95,7 @@ i {
 .content figcaption cite {
     color: #1e1e1e;
 }
+
 .footer img {
     text-align: center;
     width: 45px;
@@ -93,4 +112,42 @@ i {
     padding-top: 10pt;
     padding-bottom: 10pt;
     background-color: #1e1e1e;
+}
+
+.accordion {
+  background-color: #ffffff;
+  color:#1e1e1e;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.active, .accordion:hover {
+  background-color: #ffffff;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
