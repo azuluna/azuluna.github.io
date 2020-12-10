@@ -1,15 +1,13 @@
 .navbar {
     background-color: white;
     /* margin: 10pt; */
+    color: red;
+    text-align: center;
+    opacity: 0.9;
 }
 
 .navbar-nav {
     margin-left: auto;
-}
-
-.navbar {
-    color: red;
-    text-align: center;
 }
 
 .tittle {
@@ -24,11 +22,18 @@ i {
     color: red;
 }
 
+ a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+      color: black;
+ }
+
 .container .jumbotron {
     margin-top: -60px;
     text-align: center;
-    height: 100vh;
+    /* height: 600px; */
     padding-top: 50%;
+    padding-bottom: 20%;
 }
 
 .jumbotron b {
@@ -37,7 +42,7 @@ i {
 
 @media (min-width: 768px) {
     .container .jumbotron {
-        padding-top: 20%;
+        padding-top: 200px;
     }
 
     .jumbotron b {
@@ -83,6 +88,30 @@ i {
     height: 100%;
 }
 
+.portfolio {
+    margin-top: 30px;
+    border-color: transparent;
+    /* background-color: red; */
+}
+
+.portfolio img {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.row {
+    text-align:center;
+}
+
+@media (min-width: 768px) {
+    .row {
+        text-align: left;
+    }
+}
+
 .course {
     margin-top: 10pt;
 }
@@ -112,42 +141,108 @@ i {
     padding-top: 10pt;
     padding-bottom: 10pt;
     background-color: #1e1e1e;
+    text-align: right;
 }
 
-.accordion {
-  background-color: #ffffff;
-  color:#1e1e1e;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  text-align: center;
+#contact i {
+    color: red;
+    margin-top: 30px;
 }
 
-.active, .accordion:hover {
-  background-color: #ffffff;
+#contact i:hover {
+    color: white;
 }
 
-.accordion:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+p > a:hover{
+    color: #d9d9d9;
+    text-decoration:  underline;
 }
 
-.active:after {
-  content: "\2212";
+._12 {
+    font-size: 1.2em;
+}
+._14 {
+    font-size: 1.4em;
+}
+ul {
+    padding:0;
+    list-style: none;
+}
+.footer-social-icons {
+    /* width: 350px; */
+    display:block;
+    margin: 0 auto;
+    margin-left: -32px;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color:white;
+}
+.fa-twitter:hover {
+    background-color: red;
+}
+
+.fa-youtube {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color:white;
+}
+.fa-youtube:hover {
+    background-color: red;
+}
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: white;
+}
+.fa-linkedin:hover {
+    background-color:red;
+}
+.fa-github {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color:white;
+}
+.fa-github:hover {
+    background-color:red;
 }

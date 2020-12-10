@@ -16,6 +16,9 @@
   <!-- favicon -->
   <link rel="shortcut icon" href="img/night.svg">
 
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/d5b4205f80.js" crossorigin="anonymous"></script>
+
   <title>Youkoso! hamdanltf</title>
 </head>
 
@@ -30,11 +33,11 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="#">main</a>
-          <a class="nav-link" href="#">about</a>
-          <a class="nav-link" href="#">portfolio</a>
-          <a class="nav-link" href="#">training</a>
-          <a class="nav-link" href="#">experience</a>
-          <a class="nav-link" href="#">contact</a>
+          <a class="nav-link" href="#about">about</a>
+          <a class="nav-link" href="#portfolio">portfolio</a>
+          <a class="nav-link" href="#training">training</a>
+          <a class="nav-link" href="#experience">experience</a>
+          <a class="nav-link" href="#contact">social</a>
         </div>
       </div>
     </div>
@@ -47,14 +50,14 @@
       <p class="tag">wh-why you open this page? do you like me or what? ba-baka!</p>
     </div>
 
-    <div class="content">
+    <div class="content" id="about">
       <b class="tittle">about</b><b class="dot">.</b>
       <p><s>a NEET who has a dream to become a demon lord.</s><br>
         ordinary human who graduate from telecommunication engineering, love linux and iot. currently learning <s>to
           ride kintoun cloud</s> cloud computing</p>
     </div>
 
-    <div class="content">
+    <div class="content" id="portfolio">
       <b class="tittle">portfolio</b><b class="dot">.</b>
       <div class="col-md-6 offset-md-3">
         <div class="videowrapper">
@@ -64,22 +67,44 @@
         </div>
       </div>
       <p>Landslide Monitoring System Based on ZigBee IEEE 802.15.4 and Internet of Things</p>
-      <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.</p>
+      <i>
+        <a href="https://larys-project.web.app/" class="btn btn-dark rounded-pill" target="_blank">about project</a>
+      </i>
+      <div class="portfolio">
+        <div class="row">
+          <div class="col-md-1 offset-md-4">
+            <img src="img/sakura.svg">
+          </div>
+          <div class="col-md-3">
+            <p>
+              <b>Vertical Garden Monitoring System</b><br>
+              <i>Internet of things project 2019</i><br>
+              <a href="https://verticalgarden-project.web.app/" class="link-dark" target="_blank">visit project</a> | <a
+                href="https://github.com/hamdanltf/Vertical-Garden-Project" class="link-dark" target="_blank">view on
+                github</a>
+            </p>
+          </div>
+        </div>
+        <div class="row portfolio-child">
+          <div class="col-md-1 offset-md-4">
+            <img src="img/browser.svg">
+          </div>
+          <div class="col-md-3">
+            <p>
+              <b>AccessNet RG homepage</b><br>
+              <i>Web Development 2019</i><br>
+              <a href="https://github.com/hamdanltf/ANRG-homepage" class="link-dark" target="_blank">view on github</a>
+            </p>
+          </div>
+        </div>
       </div>
-      <button class="accordion">Section 1</button>
-      <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-      </div>
-      <p><i>to be added soon..</i></p>
+      <i>
+        <a href="https://github.com/hamdanltf" class="btn btn-dark rounded-pill" target="_blank">view more project on
+          github</a>
+      </i>
     </div>
 
-    <div class="content">
+    <div class="content" id="training">
       <b class="tittle">training</b><b class="dot">.</b>
       <p class="course">
         <b>Fundamental of Red Hat Enterprise Linux</b><br>
@@ -107,7 +132,7 @@
       </p>
     </div>
 
-    <div class="content">
+    <div class="content" id="experience">
       <b class="tittle">experience</b><b class="dot">.</b>
       <p class="jobs">
         <b>Telkomtelstra</b><br>
@@ -131,10 +156,18 @@
       </p>
     </div>
 
-    <div class="content">
-      <b class="tittle">contact</b><b class="dot">.</b>
-      <p><i>to be added soon..</i></p>
+    <div class="content" id="contact">
+      <b class="tittle">social</b><b class="dot">.</b>
+      <div class="footer-social-icons">
+        <ul class="social-icons">
+          <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-github"></i></a></li>
+        </ul>
+      </div>
     </div>
+
 
     <div class="content">
       <figure class="text-center col-md-8 offset-md-2">
@@ -158,7 +191,6 @@
   </div>
 
   <div class="bottom">
-
   </div>
 
   <!-- Optional JavaScript; choose one of the two! -->
@@ -167,23 +199,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
-
-  <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
-  </script>
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
