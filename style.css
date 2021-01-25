@@ -1,13 +1,14 @@
 .navbar {
-    background-color: white;
+    background-color: #1e1e1e;
     /* margin: 10pt; */
-    color: red;
-    text-align: center;
+    /* color: red; */
+    /* text-align: center; */
     opacity: 0.9;
 }
 
 .navbar-nav {
     margin-left: auto;
+    color: white;
 }
 
 .tittle {
@@ -31,7 +32,7 @@ i {
 .container .jumbotron {
     margin-top: -60px;
     text-align: center;
-    /* height: 600px; */
+    height: 100vh;
     padding-top: 50%;
     padding-bottom: 20%;
 }
