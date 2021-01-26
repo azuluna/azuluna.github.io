@@ -1,0 +1,333 @@
+* {
+    margin: 0 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+header {
+    background-image: linear-gradient(to left, rgba(0,0,0,0.9), rgba(0,0,0,1));
+    /* background-color: #1e1e1e; */
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    opacity: 0.95;
+}
+
+header a {
+    color: white;
+    font-size: large;
+}
+
+header .pipe {
+    color: red;
+}
+
+.nav-left {
+    float: left;
+    display: inline;
+}
+
+.nav-left a{
+    font-size: 2rem;
+    line-height: 30px;
+    /* padding: 0 -30px; */
+    color: white;
+    display: block;
+    transition: all 0.5s;
+    font-weight: bolder;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    margin-top: 25px;
+    border-radius: 50px;
+}
+
+.nav-left a:hover {
+    color: red;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-left img {
+    width: 40px;
+    margin-top: 20px;
+}
+
+.nav-right {
+    float: right;
+    margin-right: -25px;
+}
+
+.nav-right a:hover {
+    color: red;
+}
+
+.nav-right a, span {
+    line-height: 80px;
+    padding: 0 5px;
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+}
+
+.hero {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1e1e1e;
+    background-image: url("img/su-san-lee-E_eWwM29wfU-unsplash.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin-bottom: -50px;
+    font-weight: 900;
+}
+
+.block {
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,0.5));
+    width: 100%;
+    height: 100vh;
+}
+
+.yusha {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    color: whitesmoke;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    display: inline;
+    font-style: black;
+    font-weight: bold;
+}
+
+.dot {
+    color: red;
+    font-size: 6rem;
+}
+
+main p {
+    font-weight: normal;
+}
+
+main h1 {
+    display: inline;
+    font-style: black;
+    font-size: 2rem;
+}
+
+main .dot {
+    color: red;
+    font-size: 2rem;
+}
+
+.cont {
+    padding-top: 100px;
+    margin-bottom: -50px;
+    text-align: center;
+}
+
+.cont h1 {
+    font-weight: bold;
+}
+
+.about {
+    max-width: 800px;
+}
+
+.about p {
+    margin: 10px 0px;
+}
+
+.portfolio {
+    max-width: 900px;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 60px 0px;
+  text-align: center;
+}
+
+li {
+  color: white;
+  width: 100%;
+  /* background-color: red; */
+  /* height: 80px; */
+  /* line-height: 80px; */
+}
+
+.card {
+    width: 90%;
+    background-color: #1e1e1e;
+    text-align: center;
+    margin: auto auto;
+    border-radius: 1rem;
+    padding: 30px 0px;
+    height: 300px;
+    transition: 0.5s;
+}
+
+.card-title {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.card-content {
+    color: whitesmoke;
+    font-weight: 300;
+    font-style: italic;
+    padding: 10px 20px 0px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.card img {
+    width: 90px;
+    margin-top: -100px;
+    /* padding: 10px 0px; */
+    /* margin: 10px 0px; */
+}
+
+.flag {
+    background-color: whitesmoke;
+    height: 50px;
+    width: 50px;
+    margin: 10px auto 0px;
+    border-radius: 50px;
+}
+
+.card .hover {
+    display: none;
+}
+
+.card:hover {
+    background-color: whitesmoke;
+    transition: 0.5s;
+}
+
+.card:hover .card-content {
+    color:#1e1e1e;
+}
+
+.card:hover .flag {
+    background-color:#1e1e1e;
+}
+
+.flex-list {
+  display: flex;
+}
+
+.flex-list li {
+  flex: auto;
+}
+
+.list {
+    margin: 10px 0px;
+}
+
+.course {
+    margin: 5px 0px;
+}
+
+.job {
+    margin: 20px 0px;
+}
+
+.responsibility {
+    text-align: left;
+}
+
+.list i {
+    color: red;
+}
+
+.list b {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 100px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+footer .top {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    border-radius: 50pt;
+    transition: 0.5s;
+
+}
+
+footer .overtop {
+    width: 35px;
+    height: 35px;
+    background-color:#1e1e1e;
+    position: relative;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-5%, -190%);
+    border-radius: 50pt;
+    transition: 0.5s;
+    opacity: 0.9;
+}
+
+footer:hover .overtop {
+    transform: translate(15%, -200%);
+    transition: 0.5s;
+}
+
+footer:hover .top {
+    transform: translate(-60%, -20%);
+    transition: 0.5s;
+
+}
+
+footer .bottom {
+    background-color: #1e1e1e;
+    height: 40px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+footer .fname {
+    margin-top: -30px;
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+footer .lname {
+    color: #1e1e1e;
+    font-weight: normal;
+    font-size: 0.825rem;
+}
