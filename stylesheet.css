@@ -171,7 +171,7 @@ main .dot {
 }
 
 .portfolio {
-    max-width: 95%;
+    max-width: 1170;
 }
 
 ul {
@@ -246,6 +246,28 @@ li {
     border-radius: 50px;
 }
 
+.sns .flex-list {
+    margin: auto;
+    max-width: 300px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+.sns img {
+    height: 50px;
+    margin: 0px -50px;;
+    background-color: #1e1e1e;
+    border-radius: 50px;
+    box-shadow: 2px 2px 4px #000000;
+    padding: 10px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.sns img:hover {
+    background-color: whitesmoke;
+    transition: 0.5s;
+}
+
 .card:hover {
     background-color: whitesmoke;
     transition: 0.5s;
@@ -277,10 +299,6 @@ li {
 
 .job {
     margin: 20px 0px;
-}
-
-.responsibility {
-    text-align: left;
 }
 
 .list i {
