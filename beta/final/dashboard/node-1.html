@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="../stylesheet.css">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../img/hoe.svg">
+
+  <title>Dashboard Data</title>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">Larys<span>-</span>Dashboard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="node-1.html">Node-01</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="node-2.html">Node-02</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="node-3.html">Node-03</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="node-4.html">Node-04</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="node-title">
+          <h3 class="node-black">Data Pemantauan</h3>
+          <h2 class="node-red">Node 01</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="chart">
+              <canvas id="myChart-lembab"></canvas>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="chart">
+              <canvas id="myChart-jarak"></canvas>
+            </div>
+          </div>
+          <br>
+          <div class="col-md-6">
+            <div class="chart">
+              <canvas id="myChart-x"></canvas>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="chart">
+              <canvas id="myChart-y"></canvas>
+            </div>
+          </div>
+          <div class="col-12 table">
+            <table id="table" class="ui padded table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Tanggal</th>
+                  <th>Waktu</th>
+                  <th>Lokasi</th>
+                  <th>Miring X</th>
+                  <th>Miring Y</th>
+                  <th>Lembab (%)</th>
+                  <th>Jarak</th>
+                  <th>Getaran</th>
+                </tr>
+              </thead>
+              <tbody id="bodyTable">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="top"></div>
+    <div class="overtop"></div>
+    <p class="fname">Larys-project ©2019</p>
+    <p class="lname">hamdanltf redesign 2021</p>
+    <div class="bottom"></div>
+  </footer>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.semanticui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBqzL3Eg4NUBf6jdaxacp2Vdm-3-V0TwZg",
+      authDomain: "larys-project.firebaseapp.com",
+      databaseURL: "https://larys-project.firebaseio.com",
+      projectId: "larys-project",
+      storageBucket: "larys-project.appspot.com",
+      messagingSenderId: "308826173367"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="../assets/node1/style.js"></script>
+  <script src="../assets/node1/table.js"></script>
+  <script src="../assets/node1/index-jarak.js"></script>
+  <script src="../assets/node1/index-lembab.js"></script>
+  <script src="../assets/node1/index-mirx.js"></script>
+  <script src="../assets/node1/index-miry.js"></script>
+
+</body>
+
+</html>
