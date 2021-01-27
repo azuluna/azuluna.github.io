@@ -1,7 +1,12 @@
 * {
-    margin: 0 0;
+    margin: 0;
+    padding: 0px;
     box-sizing: border-box;
     font-weight: normal;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,12 +26,13 @@ a {
 
 header {
     background-image: linear-gradient(to left, rgba(0,0,0,0.9), rgba(0,0,0,1));
-    /* background-color: #1e1e1e; */
     height: 80px;
     position: fixed;
     width: 100%;
     z-index: 10;
     opacity: 0.95;
+    display: flex;
+    justify-content: space-between;
 }
 
 header a {
@@ -46,7 +52,6 @@ header .pipe {
 .nav-left a{
     font-size: 2rem;
     line-height: 30px;
-    /* padding: 0 -30px; */
     color: white;
     display: block;
     transition: all 0.5s;
@@ -70,7 +75,7 @@ header .pipe {
 
 .nav-right {
     float: right;
-    margin-right: -25px;
+    /* display: none; */
 }
 
 .nav-right a:hover {
@@ -85,6 +90,12 @@ header .pipe {
     float: left;
     transition: all 0.5s;
 }
+
+/* .nav-over img {
+    height: 40px;
+    float: right;
+    padding: auto;
+} */
 
 .hero {
     background-attachment: fixed;
@@ -160,7 +171,7 @@ main .dot {
 }
 
 .portfolio {
-    max-width: 900px;
+    max-width: 95%;
 }
 
 ul {
@@ -170,12 +181,19 @@ ul {
   text-align: center;
 }
 
+.flex-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-list li {
+    flex: auto;
+    width: 25%;
+}
+
 li {
   color: white;
   width: 100%;
-  /* background-color: red; */
-  /* height: 80px; */
-  /* line-height: 80px; */
 }
 
 .card {
@@ -195,7 +213,6 @@ li {
     color: red;
     font-weight: bold;
     font-size: 15px;
-    /* background-color: red; */
     padding: 5px;
     border-radius: 5px;
     text-align: center;
@@ -219,8 +236,6 @@ li {
 .card img {
     width: 90px;
     margin-top: -100px;
-    /* padding: 10px 0px; */
-    /* margin: 10px 0px; */
 }
 
 .flag {
@@ -301,7 +316,6 @@ footer .overtop {
     height: 35px;
     background-color:#1e1e1e;
     position: relative;
-    /* top: 50%; */
     left: 50%;
     transform: translate(-5%, -190%);
     border-radius: 50pt;

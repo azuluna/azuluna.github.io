@@ -1,0 +1,32 @@
+@media screen and (max-width: 768px) {
+    .flex-list li {
+        width: 50%;
+        padding: 25px 0px;
+    }
+
+.hero h1 {
+    font-size: 4rem;
+    display: inline;
+    font-style: black;
+    font-weight: bold;
+}
+
+
+.nav-right {
+    /* float: right; */
+    display: none;
+}
+
+/* .dot {
+    color: red;
+    font-size: 6rem;
+} */
+}
+
+/* Phone size */
+@media screen and (max-width: 576px) {
+    .flex-list li {
+        width: 100%;
+    }
+}
+
