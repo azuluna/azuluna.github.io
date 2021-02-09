@@ -247,6 +247,27 @@ li {
     border-radius: 50px;
 }
 
+#training img, #experience img {
+    height: 200px;
+    opacity: .1;
+}
+
+#training img {
+    transform: rotate(200deg);
+    height: 200px;
+    opacity: .1;
+    margin-bottom: -300px;
+    margin-left: -500px;
+}
+
+#experience {
+      overflow: hidden;
+}
+#experience img {
+    margin-bottom: -300px;
+    margin-right: -500px;
+}
+
 .sns .flex-list {
     margin: auto;
     max-width: 300px;
