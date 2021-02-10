@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images/logo anrg.png" type="image/x-icon">
+  <title>inbox</title>
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+  <!-- link to header and footer -->
+  <script>
+    $(function () {
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <main>
+    <div class="hero-inbox">
+      <div class="block-team"></div>
+      <div class="inner-hero-team container">
+        <div class="hero-text">
+          <div class="white">
+            <p>inbox cak!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <section id="events">
+        <div class="welcome-event"></div>
+        <div class="events-container"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyC_iA0rWmVW8h_ViYaAe5VafmXIkNVFaf8",
+      authDomain: "ltfproject.firebaseapp.com",
+      databaseURL: "https://ltfproject.firebaseio.com",
+      projectId: "ltfproject",
+      storageBucket: "ltfproject.appspot.com",
+      messagingSenderId: "884977742247",
+      appId: "1:884977742247:web:140cd8cb81dddff8360682"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore()
+  </script>
+
+  <script src="js/app.js"></script>
+  <script src="js/db.js"></script>
+
+</body>
+
+</html>

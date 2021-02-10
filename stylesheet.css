@@ -92,12 +92,6 @@ span {
     transition: all 0.5s;
 }
 
-/* .nav-over img {
-    height: 40px;
-    float: right;
-    padding: auto;
-} */
-
 .hero {
     background-attachment: fixed;
     background-position: center;
@@ -261,7 +255,7 @@ li {
 }
 
 #experience {
-      overflow: hidden;
+    overflow: hidden;
 }
 #experience img {
     margin-bottom: -300px;
