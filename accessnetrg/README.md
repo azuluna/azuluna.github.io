@@ -20,7 +20,7 @@ dasarnya orang gabut, labnya udah bubar baru benerin web ini wkwkwk. buat kalian
 **issue**
 
 1. nama halaman **reseacrh.html** typo, baru sadar waktu dah mau kelar. mau benerin males banget harus ganti nama di tiap link header sama footer. jadi ya udah lah ya haha. 
-2. responsif masih ngaco, sok ngide sih pake pure css. padahal pake bootstrap ae lebih cepet
+2. ~~responsif masih ngaco, sok ngide sih pake pure css. padahal pake bootstrap ae lebih cepet~~ header belum responsif
 3. halaman research butuh kasih navigasi buat tiap divisi, pr sekali kalo mau navigasi harus balik ke paling atas 
 4. kalo mau liat inbox harus masukin url secara manual, belum ada login page
 
