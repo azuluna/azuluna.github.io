@@ -1,4 +1,12 @@
 @media (max-width: 769px) { 
+    .container {
+        margin: 0px 50px;
+    }
+
+    nav ul {
+        width: 40%;
+    }
+
     .hero {
         background-position: center;
     }
@@ -23,6 +31,14 @@
         font-size: 40px;
         width: 100%;
     }   
+
+    .inner-hero {
+        margin-top: -70vh;
+    }
+
+    .inner-hero-team {
+        margin-top: -20vh;
+    }
 
     .inner-hero-research {
         margin-top: -55vh;
@@ -63,11 +79,25 @@
 }
 
 @media (max-width: 576px) {
+    .container {
+        margin: 0px 20px;
+    }
+
     .inner-hero {
+        text-align: center;
         flex-direction: column-reverse;
-        justify-content:center;
-        align-items: flex-start;
+        justify-content: ce;
+        align-items: center;
         margin-top: -80vh;
+    }
+
+    .hero-mobile {
+        margin-top: 15vh;
+    }
+
+    .hero-mobile p{
+        font-size: 70px;
+        margin-bottom: 20px;
     }
 
     .content {
@@ -82,6 +112,11 @@
 
     .content-img {
         margin-bottom: 15px;
+        /* width: 100vw; */
+    }
+
+    .content-img img {
+        max-width: 70vw;
     }
 
     .content-img-act {
@@ -96,6 +131,26 @@
         margin-left: -10px;
     }
 
+    .content-img-research {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;    
+        width: 95%;
+    }
+
+    .inner-hero-research {
+        margin-top: -70vh;
+        /* margin: 0px; */
+    }
+
+    .inner-hero-team {
+        margin-top: -20vh;
+    }
+
+    .form {
+        width: 100%;
+    }
+
     .footer-text ul {
         width: 100%;
         margin-bottom: 10px;
@@ -104,6 +159,22 @@
 }
 
 @media (max-width: 481px){
+    .container {
+        margin: 0px 10px;
+    }
+
+    nav ul {
+        width: 80%;
+    }
+
+    .inner-hero-mobile p{
+        font-size: 50px;
+    }
+
+    .inner-hero-research {
+        margin-top: -70vh;
+    }
+
     .hero-text {
         font-size: 30px;
         width: 100%;
@@ -114,6 +185,10 @@
         justify-content:center;
         align-items: center;
         margin-top: -50vh;
+    }
+
+    .inner-hero-team {
+        margin-top: -20vh;
     }
     
     .content-img img {
@@ -130,10 +205,6 @@
         display: none;
     }
 
-    .hero-mobile {
-        font-size: 80px;
-    }
-
     .hero-mobile p {
         margin-bottom: 20px;
     }
@@ -142,6 +213,10 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+    }
 
+    .form {
+        margin: 0px auto;
+        width: 80%;
     }
 }

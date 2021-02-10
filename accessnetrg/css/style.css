@@ -58,7 +58,7 @@ nav img {
 nav a {
     text-decoration: none;
     color: #bf2227;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 nav a:hover {
