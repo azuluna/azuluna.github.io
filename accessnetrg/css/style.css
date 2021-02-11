@@ -4,6 +4,11 @@
     font-family: 'Lato', sans-serif;
     text-transform: lowercase;
     transition: 0.5s;
+    /* overflow-x: hidden; */
+}
+
+main {
+    overflow-x: hidden;
 }
 
 html {
@@ -32,6 +37,10 @@ hr {
     border-bottom: 1px solid #bf2227;
 }
 
+.hr-nav {
+    margin-top: 0px;
+}
+
 nav {
     background-color:whitesmoke;
     position: fixed;
@@ -49,7 +58,7 @@ nav ul a {
 }
 
 .nav {
-    height: 100px;
+    height: 15vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,19 +88,82 @@ nav ul {
     width: 30%;
 }
 
+.dropdown .dropbtn {
+    color: #bf2227;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+}
+
+.dropbtn {
+    /* background-color: #bf2227; */
+    padding-bottom: 10px;
+    background-color: inherit;
+}
+
+.dropdown-content {
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #bf2227;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .progress-container {
     width: 100%;
     height: 5px;
     background: #ccc;
-    margin-top: 100px;
+    margin-top: 15vh;
     position: fixed;
 }
 
 .progress-bar {
-
     height: 5px;
     background: #bf2227;
     width: 0%;
+}
+
+.bigmac input {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    opacity: 0;
+    left: -18px;
+    top: -10px;
+    cursor: pointer;
+}
+.bigmac {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.bigmac span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #bf2227;
+    border-radius: 3px;
 }
 
 .hero {
@@ -288,6 +360,7 @@ nav ul {
     justify-content: space-around;
     margin-right: 30px;
     line-height: 30px;
+    width: 100%;
 }
 
 .content-text a {
@@ -295,6 +368,7 @@ nav ul {
     text-decoration: none;
     color: #bf2227;
     padding: 20px;
+    margin-left: -20px;
 }
 
 .content-text a:hover {
@@ -331,6 +405,10 @@ nav ul {
     justify-content: flex-start;
     background-color: #484848;
     margin-bottom: 100px;
+}
+
+.fas, .fab {
+    color: #bf2227;
 }
 
 footer {
@@ -371,6 +449,22 @@ footer {
     color: white;
     background-color: #bf2227;
     font-weight: bold;
+}
+
+.footer-block p {
+    padding: 5px;
+}
+
+.footer-block a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.footer-block a:hover {
+    color: blue;
+}
+.footer-block .fab {
+    color: whitesmoke;
 }
 
 .welcome-event {
