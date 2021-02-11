@@ -1,4 +1,11 @@
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logo anrg.png" type="image/x-icon">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/9c25bbcaad.js" crossorigin="anonymous"></script>
 </head>
@@ -40,4 +47,11 @@
     <div class="progress-bar" id="myBar"></div>
 </div>
 
-<script src="js/bigmac.js"></script>
+<script>
+    const menuToggle = document.querySelector('.bigmac input');
+    const nav = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function () {
+        nav.classList.toggle('slide');
+    })
+</script>

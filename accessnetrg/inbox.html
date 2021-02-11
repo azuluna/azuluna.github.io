@@ -2,13 +2,6 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="images/logo anrg.png" type="image/x-icon">
   <title>inbox</title>
 
   <!-- jquery -->
@@ -69,8 +62,47 @@
     const db = firebase.firestore()
   </script>
 
-  <script src="js/app.js"></script>
-  <script src="js/db.js"></script>
+  <!-- <script src="js/app.js"></script>
+  <script src="js/db.js"></script> -->
+
+  <script>
+    const eventsContainer = document.querySelector('.events-container')
+    const nav = document.querySelector('nav')
+    const welcomeEvent = document.querySelector('.welcome-event')
+    const form = document.querySelector('.form')
+
+    const showEvents = (event) => {
+      const { name, phone, email, description } = event
+
+      const output = `
+        <div class="card">
+          <div class="card--details">
+              <h1>${name}</h1>
+              <p>phone: ${phone}</p>
+              <p>email: ${email}</p>
+             <p>${description}</p>
+          </div>
+        </div>
+        `
+      eventsContainer.innerHTML += output;
+    }
+
+    const showLatestEvent = (latestEvent) => {
+
+      const { name, phone, email, description } = latestEvent
+      // Get the first event
+      welcomeEvent.innerHTML = `
+    <h1>${name}</h1>
+      <p>phone: ${phone}</p>
+      <p>email: ${email}</p>    
+    <p>${description.length >= 100 ? `${description.substring(0, 100)}...` : description}</p>`
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      addNewEvent()
+    })
+  </script>
 
 </body>
 

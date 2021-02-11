@@ -2,13 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="images/logo anrg.png" type="image/x-icon">
     <title>research</title>
 
     <!-- jquery -->
@@ -207,9 +200,45 @@
         const db = firebase.firestore()
     </script>
 
-    <script src="js/db.js"></script>
-    <script src="js/app.js"></script>
+    <!-- <script src="js/db.js"></script>
+    <script src="js/app.js"></script> -->
 
+    <script>
+        db.collection('events').onSnapshot(snapshot => {
+            // Handle the latest event
+            const newestEvent = snapshot.docChanges()[0].doc.data()
+            const id = snapshot.docChanges()[0].doc.id
+            showLatestEvent(newestEvent, id);
+
+            // shift the latest event element
+            snapshot.docChanges().shift()
+
+            snapshot.docChanges().forEach(event => {
+                showEvents(event.doc.data(), event.doc.id)
+            });
+        })
+
+        const addNewEvent = () => {
+            const event = {
+                name: form.name.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                booked: 0,
+                description: form.description.value,
+            }
+            db.collection('events').add(event)
+                .then(() => {
+                    // Reset the form values
+                    form.name.value = "",
+                        form.email.value = ""
+                    form.phone.value = "",
+                        form.description.value = "",
+
+                        alert('Your event has been successfully saved')
+                })
+                .catch(err => console.log(err))
+        }
+    </script>
 </body>
 
 </html>
