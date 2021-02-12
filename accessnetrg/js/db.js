@@ -17,7 +17,6 @@ const addNewEvent = () => {
     name: form.name.value,
     email: form.email.value,
     phone: form.phone.value,
-    booked: 0,
     description: form.description.value,
   }
   db.collection('events').add(event)
@@ -28,7 +27,7 @@ const addNewEvent = () => {
       form.phone.value = "",
         form.description.value = "",
 
-        alert('Your event has been successfully saved')
+        swal("thank you!", "your idea has been sent", "success");
     })
     .catch(err => console.log(err))
 }

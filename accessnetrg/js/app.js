@@ -1,5 +1,5 @@
 const eventsContainer = document.querySelector('.events-container')
-const nav = document.querySelector('nav')
+// const nav = document.querySelector('nav') <-- hapus kalo mau pake bigmac.js, bentrok cuy
 const welcomeEvent = document.querySelector('.welcome-event')
 const form = document.querySelector('.form')
 

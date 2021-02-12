@@ -170,10 +170,13 @@
                     <div class="content-text">
                         <section id="add-event">
                             <form class="form">
-                                <input type="text" id="name" placeholder="Name">
-                                <input type="email" id="email" placeholder="your email address">
-                                <input type="number" id="phone" placeholder="phone number">
-                                <textarea id="description" cols="30" rows="10" placeholder="Description..."></textarea>
+                                <input type="text" id="name" required="required" placeholder="Name *required">
+                                <input type="email" id="email" required="required"
+                                    placeholder="your email address *required">
+                                <input type="number" id="phone" required="required"
+                                    placeholder="phone number *required">
+                                <textarea id="description" cols="30" rows="10" required="required"
+                                    placeholder="Description... *required"></textarea>
                                 <button class="btn">submit &rarr;</button>
                             </form>
                         </section>

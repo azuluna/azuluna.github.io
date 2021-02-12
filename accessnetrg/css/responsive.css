@@ -83,7 +83,7 @@
 }
 
 @media screen and (max-width: 576px) {
-        .bigmac {
+    .bigmac {
         display: flex;
     }
 
@@ -108,6 +108,10 @@
     }
 
     .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .s-wing {
         display: none;
     }
 
