@@ -43,6 +43,7 @@ margin-bottom: -2px;
     background-size: cover;
     height: 100vh;
     width: 100%;
+    transition: all 0.5s;
     /* margin-top: -60px; */
     /* margin-bottom: -50px; */
     /* font-weight: 900; */
@@ -57,7 +58,7 @@ margin-bottom: -2px;
 .yusha {
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -30%);
     color: whitesmoke;
@@ -159,8 +160,8 @@ body {
 }
 
 .model img {
-    height: 400px;
-    width: auto;
+    height: auto;
+    width: 100%;
     border-radius: 10px;
     padding: 20px;
     background-color: white;
