@@ -1,17 +1,16 @@
 {
-  "name": "assets",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
   "dependencies": {
-    "firebase": "^7.18.0",
-    "node-telegram-bot-api": "^0.50.0",
+    "firebase": "^8.2.7",
+    "node-telegram-bot-api": "^0.51.0",
     "telegram-bot-api": "^2.0.1"
   },
-  "devDependencies": {},
+  "name": "assets",
+  "version": "1.0.0",
+  "main": "prapti.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
