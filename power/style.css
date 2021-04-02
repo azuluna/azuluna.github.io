@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    padding: 120px 10% 0px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+nav, footer{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+nav {
+    background-color: whitesmoke;
+      position: fixed;
+}
+
+footer {
+    justify-content: flex-end;
+}
+
+nav img, footer img {
+    height: 50px;
+    border-radius: 25px;
+}
+
+nav img {
+    margin: 0px 20px 0px 10vw;
+}
+
+footer img {
+    margin: 0px 10vw 0px 20px;
+}
+
+.footer {
+    text-align: right;
+    font-weight: 100;
+    font-size: 10px;
+}
+
+.data {
+    color:#383838;
+}
+
+.data, .control {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0px;
+}
+
+.data p {
+    text-shadow:  20px 20px 20px #d9d9d9;
+}
+
+.room {
+    /* font-size: 70px; */
+    font-size: 50px;
+}
+
+.usage {
+    /* font-size: 40px; */
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.kwh {
+    display: flex;
+    padding: 20px 0px;
+    align-items: flex-start;
+}
+
+.kwh .value {
+    font-size: 150px;
+    padding-right: 10px;
+}
+
+.kwh .unit {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.power {
+    display: flex;
+}
+
+.pwr-usage {
+    display: flex;
+    padding-right: 20px;
+}
+
+.pwr-usage .value {
+    font-size: 40px;
+    padding-right: 5px;
+}
+
+.pwr-usage .unit {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.mode, .relay {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-mode {
+    width: 45%;
+}
+
+.relay {
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-relay {
+    width: 45%;
+    padding-bottom: 20px;
+}
+
+.btn-relay button {
+    /* height: 300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-relay img {
+    height: 80px;
+    padding-bottom: 10px;
+}
+
+.cover {
+    padding: 20px;
+    position: inherit;
+}
+
+.stat {
+    position: absolute;
+    z-index: 0;
+    color:whitesmoke;
+    font-size: 100px;
+    font-style: italic;
+    opacity: 30%;
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: #909090;
+    color: whitesmoke;
+    font-size: 20px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    transition: 1s;
+    box-shadow:  20px 20px 20px #d9d9d9;
+}

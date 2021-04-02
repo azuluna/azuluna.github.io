@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/rounded-plug.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Power control</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <img src="images/rounded-plug.svg" alt="">
+        <b>Power Control</b>
+    </nav>
+
+    <div class="container">
+        <div class="data">
+            <p class="room" id="location">
+            </p>
+            <p class="usage">
+                Rata-rata pemakaian
+            </p>
+            <div class="kwh">
+                <p class="value" id="kwh"></p>
+                <p class="unit">kWh</p>
+            </div>
+            <div class="power">
+                <div class="pwr-usage">
+                    <p class="value" id="current"></p>
+                    <p class="unit">Amp</p>
+                </div>
+                <div class="pwr-usage">
+                    <p class="value" id="voltage"></p>
+                    <p class="unit">Volt</p>
+                </div>
+                <div class="pwr-usage">
+                    <p class="value" id="power"></p>
+                    <p class="unit">Watt</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="control">
+            <div class="mode">
+                <div class="btn-mode">
+                    <button id="mode1" onclick="myMode1()"></button>
+                </div>
+                <div class="btn-mode">
+                    <button id="mode2" onclick="myMode2()"></button>
+                </div>
+            </div>
+            <div class="relay">
+                <div class="btn-relay">
+                    <button id="relay1-crd" onclick="myRelay1()">
+                        <div class="cover">
+                            <img src="images/table-fan.svg" alt="">
+                            <p>kipas</p>
+                        </div>
+                        <div class="stat">
+                            <p id="relay1-sts">on</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="btn-relay">
+                    <button id="relay2-crd" onclick="myRelay2()">
+                        <div class="cover">
+                            <img src="images/table-lamp.svg" alt="">
+                            <p>lampu meja</p>
+                        </div>
+                        <div class="stat">
+                            <p id="relay2-sts">on</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="btn-relay">
+                    <button id="relay3-crd" onclick="myRelay3()">
+                        <div class="cover">
+                            <img src="images/home.svg" alt="">
+                            <p>televisi</p>
+                        </div>
+                        <div class="stat">
+                            <p id="relay3-sts">on</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="btn-relay">
+                    <button id="relay4-crd" onclick="myRelay4()">
+                        <div class="cover">
+                            <img src="images/table-lamp (1).svg" alt="">
+                            <p>lampu belajar</p>
+                        </div>
+                        <div class="stat">
+                            <p id="relay4-sts">on</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <b>System developed by: hamdanltf</b>
+            <p>hamdanltf.github.io</p>
+        </div>
+        <img src="images/photo_2021-04-02_02-03-03.jpg" alt="">
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC-3jINDG04C5dz7XhU3-cga4MmISuRO2Q",
+            authDomain: "poweroutlet-project.firebaseapp.com",
+            databaseURL: "https://poweroutlet-project-default-rtdb.firebaseio.com",
+            projectId: "poweroutlet-project",
+            storageBucket: "poweroutlet-project.appspot.com",
+            messagingSenderId: "1012413755061",
+            appId: "1:1012413755061:web:ed8d66cb8bf333f81598fc",
+            measurementId: "G-5M5Q5ESXTT"
+        };
+        firebase.initializeApp(config);
+
+        function getData() {
+            firebase.database().ref('/').on("value", function (snapshot) {
+                snapshot.forEach(function (childSnapshot) {
+                    var childKey = childSnapshot.key;
+                    var childData = childSnapshot.val();
+                    document.getElementById("kwh").innerHTML = childData['kwh'];
+                    document.getElementById("current").innerHTML = childData['current'];
+                    document.getElementById("power").innerHTML = childData['power'];
+                    document.getElementById("voltage").innerHTML = childData['voltage'];
+                    document.getElementById("location").innerHTML = childData['location'];
+
+                    if (childData['mode'] === "eco") {
+                        document.getElementById("mode1").innerHTML = "eco mode on";
+                        document.getElementById("mode1").style.backgroundColor = "#0d6efd";
+                        document.getElementById("mode2").innerHTML = "sport mode off";
+                        document.getElementById("mode2").style.backgroundColor = "#707070";
+                    } else if (childData['mode'] === "sport") {
+                        document.getElementById("mode1").innerHTML = "eco mode off";
+                        document.getElementById("mode1").style.backgroundColor = "#707070";
+                        document.getElementById("mode2").innerHTML = "sport mode on";
+                        document.getElementById("mode2").style.backgroundColor = "#0d6efd";
+
+                    } else if (childData['mode'] === "manual") {
+                        document.getElementById("mode1").innerHTML = "eco mode off";
+                        document.getElementById("mode1").style.backgroundColor = "#707070";
+                        document.getElementById("mode2").innerHTML = "sport mode off";
+                        document.getElementById("mode2").style.backgroundColor = "#707070";
+                    }
+
+                    if (childData['relay1'] === 1) {
+                        document.getElementById("relay1-sts").innerHTML = "on";
+                        document.getElementById("relay1-crd").style.backgroundColor = "#0d6efd";
+                    } else if (childData['relay1'] === 0) {
+                        document.getElementById("relay1-sts").innerHTML = "off";
+                        document.getElementById("relay1-crd").style.backgroundColor = "#dc3546";
+                    }
+
+                    if (childData['relay2'] === 1) {
+                        document.getElementById("relay2-sts").innerHTML = "on";
+                        document.getElementById("relay2-crd").style.backgroundColor = "#0d6efd";
+                    } else if (childData['relay2'] === 0) {
+                        document.getElementById("relay2-sts").innerHTML = "off";
+                        document.getElementById("relay2-crd").style.backgroundColor = "#dc3546";
+                    }
+
+                    if (childData['relay3'] === 1) {
+                        document.getElementById("relay3-sts").innerHTML = "on";
+                        document.getElementById("relay3-crd").style.backgroundColor = "#0d6efd";
+                    } else if (childData['relay3'] === 0) {
+                        document.getElementById("relay3-sts").innerHTML = "off";
+                        document.getElementById("relay3-crd").style.backgroundColor = "#dc3546";
+                    }
+
+                    if (childData['relay4'] === 1) {
+                        document.getElementById("relay4-sts").innerHTML = "on";
+                        document.getElementById("relay4-crd").style.backgroundColor = "#0d6efd";
+                    } else if (childData['relay4'] === 0) {
+                        document.getElementById("relay4-sts").innerHTML = "off";
+                        document.getElementById("relay4-crd").style.backgroundColor = "#dc3546";
+                    }
+                })
+            })
+        }
+        getData();
+
+    </script>
+    <script>
+        var a = document.getElementById("relay1-sts");
+        var b = document.getElementById("relay2-sts");
+        var c = document.getElementById("relay3-sts");
+        var d = document.getElementById("relay4-sts");
+        var x = document.getElementById("mode1");
+        var y = document.getElementById("mode2");
+        var z = document.getElementById("mode3");
+
+        function myMode1() {
+            if (x.innerHTML === "eco mode off") {
+                x.innerHTML = "eco mode on";
+                firebase.database().ref("control").set({
+                    mode: "eco"
+                });
+                y.innerHTML = "sport mode off";
+            }
+        }
+
+        function myMode2() {
+            if (y.innerHTML === "sport mode off") {
+                y.innerHTML = "sport mode on";
+                firebase.database().ref("control").set({
+                    mode: "sport"
+                });
+                x.innerHTML = "eco mode off";
+            }
+        }
+
+        function myRelay1() {
+            if (a.innerHTML === "on") {
+                a.innerHTML === "off";
+                firebase.database().ref("relay1").set({
+                    relay1: 0
+                })
+            } else if (a.innerHTML === "off") {
+                a.innerHTML === "on";
+                firebase.database().ref("relay1").set({
+                    relay1: 1
+                })
+            }
+        }
+
+        function myRelay2() {
+            if (b.innerHTML === "on") {
+                b.innerHTML === "off";
+                firebase.database().ref("relay2").set({
+                    relay2: 0
+                })
+            } else if (b.innerHTML === "off") {
+                b.innerHTML === "on";
+                firebase.database().ref("relay2").set({
+                    relay2: 1
+                })
+            }
+        }
+
+        function myRelay3() {
+            if (c.innerHTML === "on") {
+                c.innerHTML === "off";
+                firebase.database().ref("relay3").set({
+                    relay3: 0
+                })
+            } else if (c.innerHTML === "off") {
+                c.innerHTML === "on";
+                firebase.database().ref("relay3").set({
+                    relay3: 1
+                })
+            }
+        }
+
+        function myRelay4() {
+            if (d.innerHTML === "on") {
+                d.innerHTML === "off";
+                firebase.database().ref("relay4").set({
+                    relay4: 0
+                })
+            } else if (d.innerHTML === "off") {
+                d.innerHTML === "on";
+                firebase.database().ref("relay4").set({
+                    relay4: 1
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>

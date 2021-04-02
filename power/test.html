@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>test database</h1>
+    <input type="text" placeholder="name" id="namefield">
+    <input type="text" placeholder="age" id="agefield">
+    <button onclick="writeData()">submit</button>
+    <p id="data-name"></p>
+    <p id="data-age"></p>
+
+    <input type="text" placeholder="name" id="namecontrol">
+    <input type="text" placeholder="age" id="agecontrol">
+    <button onclick="writeControl()">submit</button>
+    <p id="control-name"></p>
+    <p id="control-age"></p>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC-3jINDG04C5dz7XhU3-cga4MmISuRO2Q",
+            authDomain: "poweroutlet-project.firebaseapp.com",
+            databaseURL: "https://poweroutlet-project-default-rtdb.firebaseio.com",
+            projectId: "poweroutlet-project",
+            storageBucket: "poweroutlet-project.appspot.com",
+            messagingSenderId: "1012413755061",
+            appId: "1:1012413755061:web:ed8d66cb8bf333f81598fc",
+            measurementId: "G-5M5Q5ESXTT"
+        };
+        firebase.initializeApp(config);
+
+
+        function writeData() {
+            firebase.database().ref("user").set({
+                name: document.getElementById("namefield").value,
+                age: document.getElementById("agefield").value
+            });
+
+            getData();
+        }
+
+        function getData() {
+            firebase.database().ref('/').on("value", function (snapshot) {
+                snapshot.forEach(function (childSnapshot) {
+                    var childKey = childSnapshot.key;
+                    var childData = childSnapshot.val();
+                    document.getElementById("data-name").innerHTML = childData['name'];
+                    document.getElementById("data-age").innerHTML = childData['age'];
+                })
+            })
+        }
+        getData();
+
+
+        function writeControl() {
+            firebase.database().ref("control").set({
+                name: document.getElementById("namecontrol").value,
+                age: document.getElementById("agecontrol").value
+            });
+
+            // getControl();
+        }
+
+        // function getControl() {
+        //     firebase.database().ref('/').on("value", function (snapshot) {
+        //         snapshot.forEach(function (childSnapshot) {
+        //             var childKey = childSnapshot.key;
+        //             var childData = childSnapshot.val();
+        //             document.getElementById("control-name").innerHTML = childData['name'];
+        //             document.getElementById("control-age").innerHTML = childData['age'];
+        //         })
+        //     })
+        // }
+        // getControl();
+    </script>
+</body>
+
+</html>
