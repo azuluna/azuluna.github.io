@@ -52,6 +52,9 @@
                     <button id="mode1" onclick="myMode1()"></button>
                 </div>
                 <div class="btn-mode">
+                    <button id="mode3" onclick="myMode3()"></button>
+                </div>
+                <div class="btn-mode">
                     <button id="mode2" onclick="myMode2()"></button>
                 </div>
             </div>
@@ -143,17 +146,22 @@
                         document.getElementById("mode1").style.backgroundColor = "#0d6efd";
                         document.getElementById("mode2").innerHTML = "sport mode off";
                         document.getElementById("mode2").style.backgroundColor = "#707070";
+                        document.getElementById("mode3").innerHTML = "normal mode off";
+                        document.getElementById("mode3").style.backgroundColor = "#707070";
                     } else if (childData['mode'] === "sport") {
                         document.getElementById("mode1").innerHTML = "eco mode off";
                         document.getElementById("mode1").style.backgroundColor = "#707070";
                         document.getElementById("mode2").innerHTML = "sport mode on";
                         document.getElementById("mode2").style.backgroundColor = "#0d6efd";
-
-                    } else if (childData['mode'] === "manual") {
+                        document.getElementById("mode3").innerHTML = "normal mode off";
+                        document.getElementById("mode3").style.backgroundColor = "#707070";
+                    } else if (childData['mode'] === "normal") {
                         document.getElementById("mode1").innerHTML = "eco mode off";
                         document.getElementById("mode1").style.backgroundColor = "#707070";
                         document.getElementById("mode2").innerHTML = "sport mode off";
                         document.getElementById("mode2").style.backgroundColor = "#707070";
+                        document.getElementById("mode3").innerHTML = "normal mode on";
+                        document.getElementById("mode3").style.backgroundColor = "#0d6efd";
                     }
 
                     if (childData['relay1'] === 1) {
@@ -209,6 +217,7 @@
                     mode: "eco"
                 });
                 y.innerHTML = "sport mode off";
+                z.innerHTML = "normal mode off";
             }
         }
 
@@ -219,6 +228,18 @@
                     mode: "sport"
                 });
                 x.innerHTML = "eco mode off";
+                z.innerHTML = "normal mode off";
+            }
+        }
+
+        function myMode3() {
+            if (z.innerHTML === "normal mode off") {
+                z.innerHTML = "normal mode on";
+                firebase.database().ref("control").set({
+                    mode: "normal"
+                });
+                x.innerHTML = "eco mode off";
+                y.innerHTML = "sport mode off";
             }
         }
 
