@@ -1,0 +1,54 @@
+@media (min-width: 1024px) {
+    .container {
+        display: flex;
+        flex-direction: row; 
+    }
+
+    nav b {
+        display: block;
+    }
+
+    nav ul {
+        width: 30%;
+    }
+    .data, .control {
+        width: 50%;
+    }
+
+    .room {
+        font-size: 70px;
+    }
+
+    .usage {
+        font-size: 40px;
+    }
+
+    .pwr-usage .value {
+        font-size: 40px;
+        padding-right: 5px;
+    }
+
+    .pwr-usage .unit {
+        font-size: 20px;
+    }
+
+    .mode {
+        margin-top: 50px;
+    }
+
+    .mode, .time {
+        width: 70%;
+    }
+
+    .time input {
+            padding: 20px;
+    }
+
+    .summary {
+        padding: 150px 10% 50px;
+    }
+
+    table {
+        font-size: 15px;
+    }
+}

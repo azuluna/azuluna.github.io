@@ -1,0 +1,46 @@
+<title>Power summary</title>
+<link rel="shortcut icon" href="images/rounded-plug.svg" type="image/x-icon">
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+<script>
+    $(function () {
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+    });
+</script>
+
+<div id="header"></div>
+
+<body>
+    <div class="summary">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>no</th>
+                    <th>date</th>
+                    <th>time</th>
+                    <th>current</th>
+                    <th>voltage</th>
+                    <th>power</th>
+                    <th>kwh</th>
+                </tr>
+            </thead>
+            <tbody id="bodyTable">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.semanticui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/myTables.js"></script>
+
+</body>
