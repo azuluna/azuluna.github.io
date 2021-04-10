@@ -51,4 +51,8 @@
     table {
         font-size: 15px;
     }
+
+    .rename {
+        width: 80%;
+    }
 }

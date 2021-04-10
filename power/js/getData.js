@@ -9,6 +9,10 @@ function getData() {
             document.getElementById("power").innerHTML = childData['power'];
             document.getElementById("voltage").innerHTML = childData['voltage'];
             document.getElementById("location").innerHTML = childData['location'];
+            document.getElementById("relay1-name").innerHTML = childData['relay1-name'];
+            document.getElementById("relay2-name").innerHTML = childData['relay2-name'];
+            document.getElementById("relay3-name").innerHTML = childData['relay3-name'];
+            document.getElementById("relay4-name").innerHTML = childData['relay4-name'];
 
             if (childData['mode'] === "eco") {
                 document.getElementById("mode1").innerHTML = "eco mode on";

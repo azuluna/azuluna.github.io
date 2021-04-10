@@ -7,7 +7,6 @@
 <script>
     $(function () {
         $("#header").load("header.html");
-        $("#script").load("script.html");
         $("#footer").load("footer.html");
     });
 </script>
@@ -47,8 +46,8 @@
                 <div class="btn-relay">
                     <button id="relay1-crd" onclick="myRelay1()">
                         <div class="cover">
-                            <img src="images/table-fan.svg" alt="">
-                            <p>kipas</p>
+                            <img src="images/power-plug.svg" alt="">
+                            <p id="relay1-name"></p>
                         </div>
                         <div class="stat">
                             <p id="relay1-sts">on</p>
@@ -58,8 +57,8 @@
                 <div class="btn-relay">
                     <button id="relay2-crd" onclick="myRelay2()">
                         <div class="cover">
-                            <img src="images/table-lamp.svg" alt="">
-                            <p>lampu</p>
+                            <img src="images/power-plug.svg" alt="">
+                            <p id="relay2-name"></p>
                         </div>
                         <div class="stat">
                             <p id="relay2-sts">on</p>
@@ -69,8 +68,8 @@
                 <div class="btn-relay">
                     <button id="relay3-crd" onclick="myRelay3()">
                         <div class="cover">
-                            <img src="images/home.svg" alt="">
-                            <p>televisi</p>
+                            <img src="images/power-plug.svg" alt="">
+                            <p id="relay3-name"></p>
                         </div>
                         <div class="stat">
                             <p id="relay3-sts">on</p>
@@ -80,8 +79,8 @@
                 <div class="btn-relay">
                     <button id="relay4-crd" onclick="myRelay4()">
                         <div class="cover">
-                            <img src="images/table-lamp (1).svg" alt="">
-                            <p>lampu</p>
+                            <img src="images/power-plug.svg" alt="">
+                            <p id="relay4-name"></p>
                         </div>
                         <div class="stat">
                             <p id="relay4-sts">on</p>
@@ -111,11 +110,11 @@
     </div>
 
     <div id="footer"></div>
-
+    <!-- <script src="sweetalert2.all.min.js"></script> -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
     <script src="js/firebase.js"></script>
     <script src="js/getData.js"></script>
+    <script src="js/getName.js"></script>
     <script src="js/myMode.js"></script>
-    <script src="js/myTables.js"></script>
 </body>

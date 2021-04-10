@@ -241,16 +241,17 @@ footer img {
     padding-bottom: 10px;
 }
 
-.time, .mode {
+.btn-rename .time, .mode {
     width: 100%;
     justify-content: space-between;
 }
-.time {
+.btn-rename, .time {
     display: flex;
+    justify-content: space-between;
     padding: 20px 10px 40px;
 }
 
-.time input {
+.btn-rename input, .time input {
     transition: 1s;
     width: 60%;
     border: none;
@@ -260,7 +261,7 @@ footer img {
     background-color: #d9d9d9;
 }
 
-.time input:hover {
+.btn-rename input:hover, .time input:hover {
     transition: 1s;
     background-color: cornflowerblue;
 }
@@ -310,4 +311,60 @@ button:hover {
 table {
     text-align: center;
     font-size: 8px;
+}
+
+.reset {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.reset button {
+    background-color: #dc3546;
+    width: auto;
+}
+
+.reset button:hover {
+    background-color: black;
+    opacity: 100%;
+}
+.reset p {
+    margin-top: 20px;
+}
+
+.btn-rename button {
+    padding: auto 0px;
+    max-width: 30%;
+}
+
+.btn-rename  input {
+    padding: auto 0px;
+    max-width: 60%;
+}
+
+.btn-rename {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.rename {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.title {
+    width: 80%;
+    /* color: red; */
+    font-size: 30px;
+    color: #383838;
+    text-align: center;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    margin: 40px 0px;
 }
