@@ -15,10 +15,13 @@
         font-weight: bold;
     }
 
-
     .nav-right {
         /* float: right; */
         display: none;
+    }
+
+    #training {
+        max-width: 100%;
     }
 
 }
